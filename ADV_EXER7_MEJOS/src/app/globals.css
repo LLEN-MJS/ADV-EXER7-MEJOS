@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 128, 0, 0; /* Dark red for foreground */
+  --background-start-rgb: 247, 218, 189; /* Light orange for background start */
+  --background-end-rgb: 255, 166, 77; /* Orange for background end */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 41, 56, 69; /* Dark blue for dark mode background start */
+    --background-end-rgb: 23, 42, 58; /* Blue for dark mode background end */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    );
+}
